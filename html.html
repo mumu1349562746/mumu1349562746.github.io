@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+			box-sizing: border-box;
+		}
+		.clear{
+			clear:both;
+		}
+		.ab{
+			float: left;
+			width: 100px;
+		}
+		#tab li{
+			list-style:none;
+			text-align: center;
+		}
+		#box div{
+			
+			
+			float: left;
+			position: absolute;
+			left: 100px;
+			top:100px;
+
+		}
+		#con2,#con3{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="page-header">
+  <h1>Css  学堂 <small>每日笔记与视频</small></h1>
+</div>
+
+	<script src="script/jquery.js"></script>
+	<script src="script/bootstrap.js"></script>
+	<script>
+				$("tab").click(function (e) {
+ 			 e.preventDefault()
+ 			 $(this).tab('show')
+})
+</script>
+	<div class = "ab">	
+		<ul id="tab" class="nav nav-pills  nav-stacked" role="tablist">
+			 <li role="presentation" class="active"><a href="#">9月10日</a></li>
+			 <li role="presentation" class="active"><a href="#">9月11日</a></li>
+			 <li role="presentation" class="active"><a href="#">9月24日</a></li>
+			 <li role="presentation" class="active"><a href="#">9月25日</a></li>
+			 <li role="presentation" class="active"><a href="#">10月15日</a></li>
+			 <li role="presentation" class="active"><a href="#">10月16日</a></li>
+			 <li role="presentation" class="active"><a href="#">10月22日</a></li>
+			 <li role="presentation" class="active"><a href="#">10月23日</a></li>
+			
+			
+		
+		</ul>
+	</div>
+	<div class="clear"></div>
+	<div id="box">
+		<div id="con1">
+			<video width="100%" height="auto"controls preload="none" poster="image/logo-4.png">
+				<source src="videos/acv.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div id="con2">内容二</div>
+		<div id="con3">内容三</div>
+		<div id="con3">内容4</div>
+		<div id="con3">内容5</div>
+		<div id="con3">内容6</div>
+		<div id="con3">内容三</div>
+		<div id="con3">内容三</div>
+		
+	</div>
+	<script src="script/jquery.js"></script>
+	<script>
+		$("#tab li").click(function(){
+			var ind = $(this).index();
+			//链式操作
+			$("#box div").eq(ind)
+						.css("display","block")
+						.siblings()
+						.css("display","none");
+		})
+	</script>
+</body>
+</html>
