@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		var man = ['黑人','白人','黄种人','不是人','白种人','人上人','人吓人','黑人'];
+		function norepeat(arr){
+			var newarr = [];
+			var obj = {};
+			for(var i = 0;i<man.length;i++){
+				if(obj[arr[i]]===undefined){
+					newarr.push(arr[i]);
+					obj[arr[i]] = 1;
+
+				}
+			}
+			return newarr;
+		}
+		console.log(norepeat(man))
+
+
+	</script>
+</body>
+</html>

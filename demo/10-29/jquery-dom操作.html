@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="tet">
+	<button>添加</button>
+	<ul>
+		<li>香蕉</li>
+		<li>苹果</li>
+		<li>鸭梨</li>
+	</ul>
+	<script src='script/jquery.js'></script>
+	<script>
+		
+		$('button').click(function(){
+			var input = $('input').val();
+			$('ul').append($('<li>').text(input))
+			$('input').val('')
+			
+			// var input = $('input').val();
+			// var li = $('<li>');
+			// li.text(input)
+			// $('ul').append(li);
+			// console.log(q)
+			// $('.tet').val("");
+		})
+
+	</script>
+</body>
+</html>

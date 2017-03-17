@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		.list{
+			width: 400px;
+			height: 300px;
+			margin-left: 400px;
+			border:1px solid blue;
+		}
+		.piclist{
+			width: 1200px;
+			height: 300px;
+			border:1px solid red;
+			margin-left: -400px;
+		}
+		li{
+			float: left;
+			list-style: none;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			border:1px solid red;
+		}
+		ul{
+			margin-left: 400px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class='list'>
+		<div class='piclist'>
+			<img class='pic1' src="" alt="">
+			<img class='pic2' src="" alt="">
+			<img class='pic3' src="" alt="">
+		</div>
+	</div>	
+	<ul class='numlist'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src='script/jquery.js'></script>
+	<script>
+		picture=['images/1.jpg',
+				'images/2.jpg',
+				'images/3.jpg',
+				'images/4.jpg',
+				'images/5.jpg'
+				]
+		var i
+		$('.numlist li').click(function(){
+			var index = $(this).index()
+			i=index;
+
+		})
+
+	</script>
+</body>
+</html>

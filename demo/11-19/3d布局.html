@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		img{
+			height: 300px;
+			width: 300px;
+			float: left;
+		}
+		.bigbox{
+			width: 300px;
+			margin:100px auto;
+			position: relative;
+			transform-style: preserve-3d;
+			transition:transform 5s;
+			transform-origin: 150px 150px;
+						
+		}
+		.smallbox{
+			position: absolute;
+			top:0px;
+			left:0px;
+		}
+		.box1{
+			transform:translateZ(150px); 
+		}
+		.box2{
+			transform:translateZ(-150px);
+		}
+		.box3{
+			transform: rotateY(90deg);
+			margin-left: 150px;
+		}
+		.box4{
+			transform: rotateY(90deg);
+			margin-left: -150px;
+		}
+		.box5{
+			transform:rotateX(90deg);
+			margin-top: 150px;
+		}
+		.box6{
+			transform:rotateX(90deg);
+			margin-top: -150px;
+		}
+		
+		.active{
+			transform: rotateY(360deg)
+			 rotateX(360deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class='bigbox'>
+		<div class="smallbox box1">
+			<img src="images/1.jpg" alt="">
+		</div>
+		<div class="smallbox box2">
+			<img src="images/2.jpg" alt="">
+		</div>
+		<div class="smallbox box3">
+			<img src="images/3.jpg" alt="">
+		</div>
+		<div class="smallbox box4">
+			<img src="images/4.jpg" alt="">
+		</div>
+		<div class="smallbox box5">
+			<img src="images/5.jpg" alt="">
+		</div>
+		<div class="smallbox box6">
+			<img src="images/6.jpg" alt="">
+		</div>
+		
+	</div>
+	<script src='script/jquery.js'></script>
+	<script>
+		
+		$('.bigbox').click(function(){
+			$(this).toggleClass('active');
+		})
+
+	</script>
+</body>
+</html>

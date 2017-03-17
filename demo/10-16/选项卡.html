@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		.clear{
+			clear:both;
+		}
+		li{
+			float: left;
+			height: 50px;
+			width: 200px;
+			border:1px solid red;
+			list-style: none;
+			text-align: center;
+			line-height: 50px;
+		}
+		.box{
+			float: left;
+			width: 600px;
+			height: 600px;
+			border:1px solid red;
+
+		}
+		.box2{
+			display: none;
+		}
+		.box3{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class='list'>
+		<li>标签一</li>
+		<li>标签二</li>
+		<li>标签三</li>
+	</ul>
+	<div class='clear'></div>
+	<div class='bigbox'>
+		<div class='box box1'>内容一</div>
+		<div class='box box2'>内容二</div>
+		<div class='box box3'>内容三</div>
+	</div>
+
+	<script src='script/jquery.js'></script>
+	<script>
+		
+		$('.list li').click(function(){
+			var index = $(this).index()
+			console.log(index)
+			$('.bigbox div').eq(index).css('display','block').siblings().css('display','none')
+			
+		})
+
+	</script>
+</body>
+</html>

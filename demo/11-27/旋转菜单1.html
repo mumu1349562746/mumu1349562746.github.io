@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+	}
+		
+		li{
+			width: 50px;
+			height: 50px;
+			list-style: none;
+			text-align: center;
+			line-height: 50px;
+			position: relative;
+			overflow: hidden;
+			margin-top: 10px;
+		}
+		span{
+			display: block;
+			height: 50px;
+			width: 50px;
+			border:1px solid black;
+			background-color: red;
+			color: #fff;
+		}
+		a{
+			display: block;
+			height: 50px;
+			width: 50px;
+			text-decoration:none;
+			background-color: yellow;
+			border:1px solid black;
+			position: absolute;
+			top:0px;
+			left:0px;
+			transform-origin: 0 100%;
+			transform:rotate(90deg);
+			transition:transform .1s;
+		}
+		li:hover a {
+			transform: rotate(0deg);
+		}
+
+	</style>
+</head>
+<body>
+	<ul class='list'>
+		<li>
+			<span>主页</span>
+			<a href="">主页</a>
+		</li>
+		<li>
+			<span>主页</span>
+			<a href="">主页</a>
+		</li>
+		<li>
+			<span>主页</span>
+			<a href="">主页</a>
+		</li>
+		<li>
+			<span>主页</span>
+			<a href="">主页</a>
+		</li>
+		<li>
+			<span>主页</span>
+			<a href="">主页</a>
+		</li>
+	</ul>
+</body>
+</html>

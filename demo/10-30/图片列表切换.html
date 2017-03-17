@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		li{
+			height: 50px;
+			width: 50px;
+			border:1px solid red;
+			float: left;
+			list-style: none;
+			line-height: 50px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<img class='img' src="images/1.jpg" alt="">
+	<ul class='numlist'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+		var picarry = ['images/1.jpg',
+						'images/2.jpg',
+						'images/3.jpg',
+						'images/4.jpg',
+						'images/5.jpg']
+		var ul = document.querySelector('.numlist');
+		var img = document.querySelector('.img');
+		var li = ul.children;
+		
+		for(var i = 0 ;i<li.length;i++){
+				li[i].onclick = function(){
+					img.src=picarry[index(this)]
+				}
+		}
+		
+		function index(obj){
+			var parent = obj.parentNode;
+			var siblings = parent.children;
+			for(var i = 0;i<siblings.length;i++){
+				if(siblings[i]===obj){
+					return i
+				}
+			}
+		}
+		
+
+	</script>
+</body>
+</html>

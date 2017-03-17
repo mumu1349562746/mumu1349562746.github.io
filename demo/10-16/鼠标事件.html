@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class='box'></div>
+	<script src='script/jquery.js'></script>
+	<script>
+		
+		$('.box').hover(function(){
+			$('.box').css('background-color','green')
+		},function(){
+			$('.box').css('background-color','red')
+		})
+
+	</script>
+</body>
+</html>

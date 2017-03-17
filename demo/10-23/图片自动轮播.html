@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+		.list li{
+			float: left;
+			list-style: none;
+			width: 400px;
+			height: 300px;
+		}
+		img{
+			width: 100%;
+		}
+		.list{
+			width: 2000px;
+		}
+		div{
+			width: 400px;
+			height: 300px;
+			overflow: hidden;
+		}
+		.numlist li{
+			height: 30px;
+			width: 30px;
+			border:1px solid red;
+			text-align: center;
+			line-height: 30px;
+			list-style:none;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class='list'>
+			<li>
+				<img src="images/1.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/3.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/4.jpg" alt="">
+			</li>
+			<li>
+				<img src="images/5.jpg" alt="">
+			</li>
+		</ul>
+	</div>
+	<ul class='numlist'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script src='script/jquery.js'></script>	
+	<script>
+		var index = 0
+
+		$('.numlist li').click(function(){
+			index = $(this).index();
+			console.log(index)
+			$('.list').animate({marginLeft:-400*index},2000);
+
+		})
+		
+		
+		function fun(){
+			index++;
+			if(index==5){
+					index=0
+				}
+			$('.list').animate({marginLeft:-400*index},2000);
+			
+			console.log(index)
+				
+		}
+		var t = setInterval(fun,2000)
+		$('.numlist li').hover(function(){
+			clearInterval(t);
+			console.log('tt')
+		},function(){
+			t = setInterval(fun,2000);
+			
+			console.log('ct')
+		})
+		
+	</script>
+</body>
+</html>

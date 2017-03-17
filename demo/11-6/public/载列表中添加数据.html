@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul class='list'></ul>
+	<button>获取数据</button>
+	<script src='script/jquery.js'></script>
+	<script>
+		
+		// var fruitList = ['香蕉','苹果','鸭梨','桃子'];
+		
+		$('button').click(function(){
+			$.ajax({
+				url:'/fruitlist',
+				type:'get'
+			}).done(function(data){
+				for(var i = 0;i<fruitlist.length;i++){
+							var li = $('<li>');
+							 = li.text(data[i]);
+							$('.list').append(li);
+						}
+
+
+
+			})
+		})
+
+	</script>
+</body>
+</html>

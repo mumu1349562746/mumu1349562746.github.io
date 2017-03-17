@@ -1,0 +1,9 @@
+	*{
+			margin: 0;
+			padding:0;
+		}
+		.bgc{
+			background-image:url(../images/banner-bg.jpg);
+			height:937px ;
+			
+		}

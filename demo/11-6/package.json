@@ -1,0 +1,8 @@
+{
+  "name": "myWebApp",
+  "<ve></ve>rsion": "0.0.0.",
+  "devDependencies": {
+    "express": "^4.14.1",
+    "jquery": "^3.1.1"
+  }
+}

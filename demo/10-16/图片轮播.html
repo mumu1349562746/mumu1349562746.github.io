@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		.clear{
+			clear:both;
+		}
+		.picbox{
+			width: 400px;
+			height: 260px;
+			border:1px solid red;
+			overflow: hidden;
+		}
+		.box{
+			width: 2000px;
+			
+		}
+		img{
+			width: 400px;
+			float: left;
+		}
+
+		li{
+			width: 30px;
+			height: 30px;
+			border:1px solid red;
+			float: left;
+			list-style: none;
+			text-align: center;
+			line-height: 30px
+		}
+
+	</style>
+</head>
+<body>
+	<div class='picbox'>
+		<ul class='box'>
+			<img src="images/1.jpg" alt="">
+			<img src="images/2.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+			<img src="images/4.jpg" alt="">
+			<img src="images/5.jpg" alt="">
+		</ul>
+		
+	</div>	
+	<div class='clear'></div>
+	<ul class='numlist'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>	
+	<script src='script/jquery.js'></script>
+	<script>
+		
+		$('.numlist li').click(function(){
+			var index = $(this).index();
+			console.log(index)
+			$('.box').animate({marginLeft:-400*index},1000)
+		})
+
+	</script>
+</body>
+</html>

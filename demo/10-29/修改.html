@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text">
+	<button>修改</button>
+	<ul>
+		<li>香蕉</li>
+		<li>苹果</li>
+		<li>鸭梨</li>
+	</ul>
+	<script src='script/jquery.js'></script>
+	<script>
+		var a ;
+		$('ul li').click(function(){
+			a = $(this)
+		})
+
+		$('button').click(function(){
+			var value = $('input').val();
+			a.text(value);
+			$('input').val('')
+		})
+
+	</script>
+</body>
+</html>

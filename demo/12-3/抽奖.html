@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>抽奖</button>
+	<script src = 'jquery.js'></script>
+	<script>
+		
+		var num = ['a','b','c','d'];
+		$('button').click(function(){
+			if(num.length !==0){
+				var random = Math.floor(Math.random()*num.length);
+				console.log(random)
+				var qq = num[random]
+				console.log(qq)
+			}
+			num.splice(random,1)
+		})
+
+	</script>
+</body>
+</html>

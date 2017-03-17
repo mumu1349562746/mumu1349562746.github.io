@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span class='miao'>5</span><span>秒后跳转百度</span>
+	<script src='script/jquery.js'></script>
+	<script>
+		var i = 4;
+		
+		function fun(){
+			$('.miao').text(i);
+			i--;
+			if(i===-1){
+				clearInterval(t);
+				window.location.href='https://www.baidu.com/'
+			}
+		}
+		var t = setInterval(fun,1000)
+
+	</script>
+</body>
+</html>

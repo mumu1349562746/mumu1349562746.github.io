@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>抽奖</button>
+	<script src ='jquery.js'></script>
+	<script>
+		var newarr = []
+		var surperman=['蜘蛛侠','超人','雷神','凯瑞甘','他萨达','泰克斯','维拉']
+		$('button').click(
+		function fun(){
+			var random = Math.floor(Math.random()*surperman.length);
+			if(newarr.length === 0){
+				newarr.push(surperman[random]);
+				console.log(surperman[random]);
+				
+			}else{
+				for(var i = 0;i<newarr.length;i++){
+					if(newarr[i]===surperman[random]){
+						fun();
+						return
+					}	
+				}
+				newarr.push(surperman[random]);
+				console.log(surperman[random]);
+			}
+		})
+
+	</script>
+</body>
+</html>

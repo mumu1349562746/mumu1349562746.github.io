@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+	var date = new Date();
+	// 总的时间
+	var year = date.getFullYear();
+	// 年份
+	var month = date.getMonth()+1;
+	// 月份，因为0为1月，所以后面加1
+	var day = date.getDay();
+	// 周几
+	var dat = date.getDate();
+	// 日期
+	var hours = date.getHours();
+	// 小时
+	var minutes = date.getMinutes();
+	// 分钟
+	var seconds = date.getSeconds();
+	console.log(date);
+	console.log(year);
+	console.log(month);
+	console.log(day);
+	console.log(dat);
+	console.log(hours);
+	console.log(minutes);
+	console.log(seconds);
+	setInterval(function(){
+		console.log(new Date())
+	},100)
+
+
+	</script>
+</body>
+</html>

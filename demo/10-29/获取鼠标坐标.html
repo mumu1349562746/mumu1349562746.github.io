@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		.box{
+			width: 2000px;
+			height: 2000px;
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class='box'></div>
+	<script src='script/jquery.js'></script>
+	<script>
+		$('.box').mousemove(function(event){
+			var x = event.pageX;
+			var y = event.pageY;
+			console.log('x坐标'+x)
+			console.log('y坐标'+y)
+		})
+	</script>
+</body>
+</html>

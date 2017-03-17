@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/bootstrap.css">
+</head>
+<body>
+	<button>按年龄</button>
+	<button>按成绩</button>
+	<table class='table'>
+		
+		<thead>
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>成绩</td>
+			</tr>
+		</thead>
+		<tbody></tbody>
+
+	</table>
+	<script src ='script/jquery.js'></script>
+	<script>
+		var student = [
+			{name:'丽丽',age:13,text:'80'},
+			{name:'李雷',age:25,text:'100'},
+			{name:'毛晓',age:80,text:'46'},
+			{name:'沐沐',age:1,text:'87'},
+			{name:'崔鑫',age:9,text:'100'},
+			{name:'崔玲',age:45,text:'10'},
+			{name:'吉阳',age:33,text:'20'},
+			{name:'是谁',age:46,text:'40'}
+		]
+		
+		function paixu(obj,src){
+			var len = obj.length;
+			for(var i = len-1;i>0;i--){
+				$td = $('<tr>')
+				for(var j = 0;j<i;j++){
+					if(obj[j][src]>obj[j+1][src])
+				}
+			}
+		}
+
+
+	</script>
+</body>
+</html>

@@ -4,18 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="css/buju9-24.css">
 	<style type="text/css">
 		*{
 			margin:0px;
 			padding:0px;
 			box-sizing: border-box;
 		}
-		.clear{
-			clear:both;
-		}
 		.ab{
 			float: left;
 			width: 100px;
+		}
+		.page-header{
+			position: fixed;
+			top:-20px;
+			background-color: gray;
+			width: 100%;
+			opacity: 1;
+			z-index: 99;
+		}
+		#tab{
+			position: fixed;
+			top:100px;
 		}
 		#tab li{
 			list-style:none;
@@ -32,6 +42,11 @@
 		}
 		#con2,#con3{
 			display: none;
+		}
+		.xiahuaxian{
+			width: 500px;
+			line-height: 50px;
+			border-bottom: 1px dotted red;
 		}
 	</style>
 </head>
@@ -66,17 +81,67 @@
 	<div class="clear"></div>
 	<div id="box">
 		<div id="con1">
-			<video  height="auto"controls preload="none" poster="image/logo-4.png">
-				<source src="videos/acv.mp4" type="video/mp4">
-			</video>
+			<h1 class='xiahuaxian'>标签的练习</h1>
+					<h1>第一个标题</h1>
+			<p>在第三十二个教师节来临之际，9日上午，习近平总书记来到位于海淀区的北京市八一学校看望师生，向全国广大教师和教育工作者致以节日问候。习近平曾在这所学校度过小学和初中的时光。八一学校由1947年聂荣臻元帅在河北阜平创建的荣臻子弟学校发展而来，是所现代化的历史名校。</p>
+			<h2>我的第一个标题</h2>
+			<p>在第三十二个教师节来临之际，9日上午，习近平总书记来到位于海淀区的北京市八一学校看望师生，向全国广大教师和教育工作者致以节日问候。习近平曾在这所学校度过小学和初中的时光。八一学校由1947年聂荣臻元帅在河北阜平创建的荣臻子弟学校发展而来，是所现代化的历史名校。</p>
+			<img src="images/1.jpg" alt="">
+			<img src="images/1.jpg" alt="">
+			<li><a href="">百度</a></li>
+			<li>腾讯</li>
+			<li>阿里</li>
+			<li>网易</li>
+			<li>搜狐</li>
+			<a href="">百度</a>
+			<a href="">百度</a>
+			<a href="">百度</a>
+			<a href="">百度</a>
+			<a href="">百度</a>
 		</div>
-		<div id="con2">内容二</div>
-		<div id="con3">内容三</div>
-		<div id="con3">内容4</div>
-		<div id="con3">内容5</div>
-		<div id="con3">内容6</div>
-		<div id="con3">内容三</div>
-		<div id="con3">内容三</div>
+		<div id="con2">
+			<h1 class='xiahuaxian'>标签的练习</h1>
+				<h1>百度</h1>
+
+				<li>香蕉</li>
+				<li>苹果</li>
+				<li>阿里</li>
+				<li>网易</li>
+				<li>搜狐</li>
+			<h2>我的css样式</h2>
+				<li>百度</li>
+				<li>腾讯</li>
+				<li>阿里</li>
+				<li>网易</li>
+				<li>搜狐</li>
+		</div>
+		<div id="con3">
+			<div class='header'>
+				
+				<h1 class='logo'>卧龙控股</h1>
+				<h1 class='search'>这是一个搜索</h1>
+				<div style='clear: both'></div>
+				<ul >
+					<li class='listtext'><a href="">博易主页</a></li>
+					<li><a href="">公司介绍</a></li>
+					<li><a href="">博易课堂</a></li>
+					<li><a href="">博易纪要</a></li>
+					<li><a href="">技术博客</a></li>
+					<li><a href="">博易英雄榜</a></li>
+					<li><a href="">公司位置</a></li>
+					<li><a href="">练习我们</a></li>
+				</ul>
+
+			</div>
+			<div class='banner'></div>
+			<div class='container'></div>
+			<div class='footer'></div>
+		</div>
+		<div id="">内容4</div>
+		<div id="">内容5</div>
+		<div id="">内容6</div>
+		<div id="">内容三</div>
+		<div id="">内容三</div>
 		
 	</div>
 	<script src="script/jquery.js"></script>

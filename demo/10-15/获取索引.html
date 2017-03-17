@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul id='numlist'>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<ul class='mulist'>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+	<script src='script/jquery.js'></script>
+	<script>
+		
+	// $('.numlist li' ).click(function(){
+	// 	var qq=$(this).index();
+	// 	alert(qq)
+	// })
+	
+	// function li(){
+ //        var li=document.getElementsByTagName('li');
+ //        for(var i=0;i<li.length;i++){
+ //            li[i].index=i;
+ //            li[i].onclick=function(){
+ //                alert(this.index);
+ //                for(var j=0;j<li.length;j++){
+ //                    li[j].className='';
+ //                    }
+ //                this.className='on';
+ //                };
+ //            }
+ //        }
+ //    li();
+ // 原生获取索引
+ 		function li(){
+ 			var list = document.getElementById('#numlist');
+ 			var li = document.getElementsByTagName('li');
+ 			for(var i = 0;i<li.length;i++){
+ 				li[i].index=i;
+ 				//index可以随意编写
+ 				li[i].onclick=function(){
+ 					alert(this.index)	
+ 					}
+ 				}
+ 			}
+ 		li()
+
+	</script>
+</body>
+</html>

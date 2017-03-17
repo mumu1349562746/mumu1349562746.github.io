@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/bootstrap.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<button id='nianling'>按年龄</button>
+	<button id='chengji'>按成绩</button>
+	<table class='table'>
+		<thead>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>成绩</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+	<script src = 'script/jquery.js'></script>
+	<script>
+		
+		var student = [
+			{name:'美国队长',age:3,text:30},
+			{name:'蜘蛛侠',age:6,text:70},
+			{name:'超人',age:8,text:40},
+			{name:'蝙蝠',age:20,text:45},
+			{name:'半藏',age:23,text:33},
+			{name:'黑寡妇',age:42,text:78},
+			{name:'士兵76',age:80,text:12},
+			{name:'闪光',age:13,text:0},
+			{name:'温斯顿',age:100,text:88}
+		];
+		function paixu(obj,src){
+			var len = student.length;
+			for(var i = len-1;i>0; i--){
+				for(var j = 0;j<i;j++){
+					if(obj[j][src]>obj[j+1][src]){
+						[obj[j],obj[j+1]]=[obj[j+1],obj[j]];
+					}
+				}
+			}
+		}
+		function showdata(obj){
+			$('tbody').empty()
+			for(var i in obj){
+				var $tr = $('<tr>');
+				for(var j in obj[i]){
+					var $td = $('<td>');
+					$td.text(obj[i][j]);
+					$tr.append($td);
+				}
+				$('tbody').append($tr)
+			}
+		}
+		showdata(student)
+		$('#nianling').click(function(){
+			paixu(student,'age');
+			showdata(student);
+		})
+		$('#chengji').click(function(){
+					paixu(student,'text');
+					showdata(student);
+				})
+
+		
+
+
+	</script>
+</body>
+</html>
